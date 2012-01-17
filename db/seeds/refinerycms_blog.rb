@@ -5,7 +5,7 @@
   end
 end if defined?(::User)
 
-if defined?(::Page)
+if defined?(::Page) && !::Page.by_title("Blog").any?
   page = ::Page.create(
     :title => "Blog",
     :link_url => "/blog",
